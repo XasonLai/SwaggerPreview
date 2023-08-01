@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Swagger Preview",
+  "version": "1.0",
+  "description": "Use Swagger Preview Github YAML File With Raw.",
+  "permissions": [
+    "tabs",
+    "scripting"  // 確保已設定 scripting 權限
+  ],
+  "host_permissions": [
+    "https://raw.githubusercontent.com/*"
+  ],
+  "background": {
+    "service_worker": "privew.js"
+  },
+  "action": {
+    "default_icon": {
+      "128": "cat.png"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
